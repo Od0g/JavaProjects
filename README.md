@@ -1,4 +1,3 @@
-# JavaProjects
 # Projetos Java 🚀
 
 Este repositório contém diversos projetos desenvolvidos em Java, abrangendo desde conceitos básicos até aplicações mais avançadas. O objetivo é aprimorar minhas habilidades na linguagem e compartilhar códigos úteis para aprendizado e referência.
