@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/qrsurprise
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+firebase:
+  service-account: /firebase-service-account.json
+  storage:
+    bucket-name: seu-bucket.appspot.com
+
+jwt:
+  secret: "sua-chave-secreta-super-forte-aqui"
+  expiration-ms: 86400000 # 24h
+
+server:
+  port: 8080
