@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h1 class="card-title">Formulário de Contato</h1>
+            </div>
+            <div class="card-body">
+                <form th:action="@{/submit}" th:object="${mensagem}" method="post">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome:</label>
+                        <input type="text" class="form-control" id="nome" th:field="*{nome}">
+                        <div th:if="${#fields.hasErrors('nome')}" class="text-danger">
+                            <small th:each="err : ${#fields.errors('nome')}" th:text="${err}"></small>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" th:field="*{email}">
+                        <div th:if="${#fields.hasErrors('email')}" class="text-danger">
+                            <small th:each="err : ${#fields.errors('email')}" th:text="${err}"></small>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem:</label>
+                        <textarea class="form-control" id="mensagem" th:field="*{mensagem}" rows="3"></textarea>
+                        <div th:if="${#fields.hasErrors('mensagem')}" class="text-danger">
+                            <small th:each="err : ${#fields.errors('mensagem')}" th:text="${err}"></small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
