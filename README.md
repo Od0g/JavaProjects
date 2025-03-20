@@ -33,5 +33,3 @@ Cada diretório representa um projeto independente. Aqui estão alguns dos proje
 
 ✉ Contato
 Caso tenha dúvidas ou sugestões, entre em contato através do https://www.linkedin.com/in/augustoinacio/
-
-
